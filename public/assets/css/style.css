@@ -1,0 +1,26 @@
+.w-25 {
+    width: 25%;
+} 
+
+.mr-mt {
+    margin-left: 25px;
+}
+
+.flex-block {
+    display: flex;
+}
+
+@media(max-width: 700px) {
+    .flex-block {
+        display: block;
+    } 
+
+    .w-25 {
+        width: 100%;
+    }
+
+    .mr-mt {
+        margin-left: 0px;
+        margin-top: 25px;
+    }
+}
