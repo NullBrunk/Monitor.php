@@ -1,5 +1,6 @@
 <?php 
 
+
 if($_SERVER["REQUEST_METHOD"] !== "GET" ) die("There is only one HTTP supported method: GET");
 
 
@@ -45,8 +46,32 @@ else if(isset($_GET["uptime"])) {
     ]);
 }
 
-else if(isset($_GET["cpu_usage"])) {
-    
-}
+else if(isset($_GET["cpu"])) {
 
+    function cpu_info() {
+        preg_match(
+            '/^cpu\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/', 
+            file_get_contents("/proc/stat"), 
+            $matches
+        );
+
+        return array_slice($matches, 1);
+    }
+
+    $stats1 = cpu_info();
+    sleep(1);
+    $stats2 = cpu_info();
+        
+    $usage = array_map(function($x, $y) {
+        return $y - $x;
+    }, $stats1, $stats2);
+
+    // Calculer le temps total
+    $total = array_sum($usage);
+
+    // Calculer le pourcentage d'utilisation du CPU
+    $percentage = ($total - $usage[3]) / $total * 100;
+
+    echo(round($percentage, 0));
+}
 ?>

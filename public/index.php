@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/tailwind.css">
 
@@ -17,7 +19,7 @@
 
 
     <nav class="bg-gray-800">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mx-6 max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         
@@ -48,7 +50,7 @@
     <body class="bg-slate-900">
 
 
-        <section class="m-6 flex-block">
+        <section class="m-8 flex-block">
 
         <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
@@ -127,8 +129,22 @@
                 </div>
             </div>
 
+        </section>        
+        
+        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+            <div class="font-bold text-xl mb-2 text-indigo-400">
+                CPU
+                <span class="text-slate-500">|</span>
+                <span class="text-xs text-slate-500">Graph</span>
+            </div>  
+
+            <div>
+                <div>
+                    <canvas style="height: 53vh;" id="myChart"></canvas>
+                </div>
+            </div>
+
         </section>
-            
     </body>
 
     <script src="assets/js/script.js"></script>
