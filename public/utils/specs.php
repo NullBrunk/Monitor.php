@@ -29,7 +29,7 @@ preg_match(
 
 
 $SPECS = [
-    "Name" => file_get_contents('/etc/hostname'),  
+    "Name" => ucfirst(file_get_contents('/etc/hostname')),  
     "Host" => file_get_contents("/sys/devices/virtual/dmi/id/product_name"), 
     "OS" => explode('"', file_get_contents("/etc/os-release"))[1], 
     "Kernel" => "Linux " . $matches[1], 
