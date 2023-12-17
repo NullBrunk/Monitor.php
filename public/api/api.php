@@ -1,6 +1,5 @@
 <?php 
 
-
 if($_SERVER["REQUEST_METHOD"] !== "GET" ) die("There is only one HTTP supported method: GET");
 
 
@@ -16,6 +15,7 @@ if(isset($_GET["ram"])) {
     echo $mem_used_gb;
     die;
 }
+
 else if(isset($_GET["uptime"])) {
    
     $time = floatval(file_get_contents('/proc/uptime'));
@@ -28,15 +28,24 @@ else if(isset($_GET["uptime"])) {
     $to_pr = "";
 
     if($hours != 0) {
-        $to_pr .= ($hours >= 10 ?  $hours : "0" . $hours) . "h ";     
+        if($hours >= 10)
+            $to_pr .= $hours . "h ";
+        else
+            $to_pr .= "0" . $hours . "h ";     
     }
 
     if($mins != 0) {
-        $to_pr .= ($mins >= 10 ?  $mins : "0" . $mins) . "min ";
+        if($mins >= 10)
+            $to_pr .= $mins . "min ";
+        else
+            $to_pr .= "0" . $mins . "min ";
     }
 
     if($secs != 0) {
-        $to_pr .= ($secs >= 10 ?  $secs : "0" . $secs) . "sec ";
+        if($secs >= 10)
+            $to_pr .= $secs . "sec ";
+        else
+            $to_pr .= "0" . $secs . "sec ";
     }
 
 

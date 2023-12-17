@@ -10,6 +10,32 @@
     display: flex;
 }
 
+.ascii-logo {
+    /*
+        - 4 rem     : Height of menubar
+        - 2 * 2 rem : mt-8 & mb-8, margin top of 2 rem and margin bottom of 2 rem
+    */
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.specs {
+    /*
+        35vw: Distro logo
+        2rem: Margin left of distro logo
+        1rem: Margin right of distro logo
+        2rem: margin right of 2 rem done by hand 
+    */
+    width: calc(100vw - 35vw - 2rem - 1rem - 2rem);
+}
+
+pre {
+    margin: auto !important;
+}
+
+
+
 @media(max-width: 700px) {
     .flex-block {
         display: block;
@@ -22,5 +48,18 @@
     .mr-mt {
         margin-left: 0px;
         margin-top: 25px;
+    }
+
+    .ascii-logo, .specs{
+        width: calc(100vw - 2 * 2rem);
+    }
+
+    .specs {
+        margin-left: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .none-sm {
+        display: none;
     }
 }

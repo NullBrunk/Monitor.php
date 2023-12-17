@@ -15,3 +15,7 @@
 A PHP monitoring website that displays system metrics in real-time, using JavaScript in client-side, and PHP for the API. The front-end framework used is tailwind
 
 ![Peek 14-12-2023 19-10](https://github.com/NullBrunk/PHPMonitor/assets/125673909/a4bc3ad1-0d50-4ed9-bbaf-df35326d7ebb)
+
+# Thanks
+
+- https://github.com/dylanaraps/neofetch for the ascii logos on specs page.
