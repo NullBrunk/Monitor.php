@@ -52,7 +52,8 @@ $content = file_get_contents("/etc/os-release");
 
     <body class="bg-slate-900">
 
-        <div class="flex-block">
+
+        <div class="flex-block" style="margin-top: 3%;">
             <section class="mt-8 ml-8 mr-4 ascii-logo rounded  bg-slate-900 text-white overflow-scroll">
           
                 <?php if(strpos($content, "arch") !== false): ?>
