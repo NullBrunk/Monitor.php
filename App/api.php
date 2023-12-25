@@ -10,6 +10,11 @@ if(isset($_GET["ram"])) {
     echo $ram -> get_ram_used();
 }
 
+else if(isset($_GET["ram_percent"])) {
+    $ram = new RAM();
+    echo $ram -> get_ram_used_percent();
+}
+
 else if(isset($_GET["cpu"])) {
     $cpu = new CPU();
     echo $cpu -> get_usage();

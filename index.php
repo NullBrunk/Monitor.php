@@ -32,7 +32,6 @@
                             <a href="index.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
                             <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                             <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
-                            <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                             <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
                         </div>
                     </div>
@@ -46,7 +45,6 @@
                 <a href="index.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
                 <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
                 <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
-                <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                 <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
             </div>
         </div>
@@ -55,7 +53,7 @@
     <body class="bg-slate-900">
 
 
-        <section class="m-8 flex-block">
+        <section class="m-8 flex-block mb-0">
 
             <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
@@ -133,24 +131,42 @@
                     </div>                   
                 </div>
             </div>
-
         </section>        
         
-        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-            <div class="font-bold text-xl mb-2 text-indigo-400">
-                CPU
-                <span class="text-slate-500">|</span>
-                <span class="text-xs text-slate-500">Graph</span>
-            </div>  
 
-            <div>
+        <section class="flex-block">
+            <div class="w-50 m-8 mr-1 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="font-bold text-xl mb-2 text-indigo-400">
+                    CPU
+                    <span class="text-slate-500">|</span>
+                    <span class="text-xs text-slate-500">Usage in %</span>
+                </div>  
                 <div>
-                    <canvas style="height: 53vh;" id="myChart"></canvas>
+                    <div>
+                        <canvas style="height: 53vh;" id="cpuChart"></canvas>
+                    </div>
                 </div>
             </div>
 
+
+            <div class="w-50 m-8 ml-1 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="font-bold text-xl mb-2 text-indigo-400">
+                    RAM
+                    <span class="text-slate-500">|</span>
+                    <span class="text-xs text-slate-500">Usage in %</span>
+                </div>  
+                <div>
+                    <div>
+                        <canvas style="height: 53vh;" id="ramChart"></canvas>
+                    </div>
+                </div>
+            </div>
         </section>
+       
     </body>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/dashboard_cpu.js"></script>
+    <script src="assets/js/dashboard_ram.js"></script>
+
 </html>

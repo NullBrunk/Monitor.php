@@ -29,7 +29,6 @@
                             <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
                             <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                             <a href="cpu.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">CPU</a>
-                            <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                             <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
                         </div>
                     </div>
@@ -43,7 +42,6 @@
                 <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
                 <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                 <a href="cpu.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">CPU</a>
-                <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                 <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
             </div>
         </div>
@@ -86,13 +84,13 @@
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        Cores
+                        Cores / Threads
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-heart-pulse mr-6"></i>
                         </div>
-                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_cores() ?></h1>
+                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_cores() . "/" . $cpu -> get_threads()?></h1>
                     </div>                   
                 </div>
             </div>
@@ -100,13 +98,13 @@
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        Threads
+                        Max 
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-fullscreen-exit mr-6"></i>
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-plus-lg mr-6"></i>
                         </div>
-                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_threads() ?></h1>
+                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_max_freq() ?> GHz</h1>
                     </div>                   
                 </div>
             </div>            

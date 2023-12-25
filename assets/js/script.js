@@ -1,34 +1,6 @@
-let datas = [0, 0, 0, 0, 0, 0];
-const cvs = document.getElementById('myChart');
-
 Chart.defaults.backgroundColor = '#9BD0F5';
 Chart.defaults.borderColor = '#555555';
-Chart.defaults.color = '#FFFFFF';    
-
-let ch = new Chart(cvs, {
-    type: 'line', 
-    data: {
-        labels: ["12 sec ago","10 sec ago","8 sec ago","6 sec ago","4 sec ago","2 sec ago"],
-        datasets: [{
-            label: 'CPU Usage',
-            data: datas,
-            borderWidth: 1,
-            fill: false,
-            tension: 0.5
-        }]
-    },
-    options: {
-        maintainAspectRatio: false,
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        },
-        animation: {
-            duration: 0 // Désactive les animations
-        }
-    }
-});
+Chart.defaults.color = '#FFFFFF';  
 
 setInterval(() => {
     fetch("App/api.php?ram").then((resp) => {
@@ -49,14 +21,6 @@ setInterval(() => {
     })
 }, 1000)
 
-setInterval(() => {
-    fetch("App/api.php?cpu").then((resp) => {
-        resp.json().then((data) => {
-            datas.shift();
-            datas.push(data);
-            ch.data.datasets[0].data = datas;
-            ch.update();
-        })
-    })
-}, 2000)
+
+
 

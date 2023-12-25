@@ -2,6 +2,10 @@
     width: 25%;
 } 
 
+.w-50 {
+    width: 50%;
+}
+
 .mr-mt {
     margin-left: 25px;
 }
@@ -41,7 +45,8 @@ pre {
         display: block;
     } 
 
-    .w-25 {
+    .w-25,
+    .w-50 {
         width: 100%;
     }
 

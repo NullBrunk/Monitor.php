@@ -87,4 +87,9 @@ class CPU {
 
         return array_map(fn($freq_in_mhz) => round($freq_in_mhz / 1000, 2) . " GHz", $matches[1]);
     }
+
+    public function get_max_freq() {
+        $max_freq_mhz = file_get_contents("/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq");
+        return round($max_freq_mhz / pow(10, 6), 2);
+    }
 }

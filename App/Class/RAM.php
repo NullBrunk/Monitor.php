@@ -4,6 +4,7 @@ class RAM {
     
     public string $meminfo;
     public array $parsable_meminfo;
+    public string $mem_type;
 
 
     public function __construct()
@@ -26,5 +27,9 @@ class RAM {
         $used = $this -> get_ram_total() - $this -> kb_to_gb($kb_ram_used); 
 
         return $used;
+    }
+
+    public function get_ram_used_percent() {
+        return $this -> get_ram_used() / $this -> get_ram_total() * 100;
     }
 }
