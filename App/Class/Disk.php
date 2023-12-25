@@ -1,12 +1,6 @@
 <?php
 
 class Disk {
-
-    public function __construct()
-    {    
-    }
-
-
     static function to_gb($in_bytes) {
         return round((int)$in_bytes / pow(10, 9), 0);
     }
