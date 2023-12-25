@@ -68,4 +68,23 @@ class CPU {
 
         return $matches[1];
     }
+
+    public function get_name() {
+        preg_match(
+            '/vendor_id\s*:\s*[A-Z][a-z]+([A-Z]*[a-z]*)/', 
+            $this -> cpuinfo, 
+            $matches
+        );
+
+        return $matches[1];
+    }
+
+    public function get_freq() {
+        preg_match_all(
+            '/cpu MHz\s*:\s*([\d.]+)/', 
+            $this -> cpuinfo, $matches
+        );
+
+        return array_map(fn($freq_in_mhz) => round($freq_in_mhz / 1000, 2) . " GHz", $matches[1]);
+    }
 }

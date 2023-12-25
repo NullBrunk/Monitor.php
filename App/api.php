@@ -15,6 +15,11 @@ else if(isset($_GET["cpu"])) {
     echo $cpu -> get_usage();
 }
 
+else if(isset($_GET["freq"])) {
+    $cpu = new CPU();
+    echo json_encode($cpu -> get_freq());
+}
+
 else if(isset($_GET["uptime"])) {
     echo Other::get_uptime();
 }

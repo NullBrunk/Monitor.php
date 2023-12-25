@@ -13,7 +13,6 @@ $other = new Other();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
@@ -29,11 +28,11 @@ $other = new Other();
         
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
-                            <a href="index.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
+                            <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
                             <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                             <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
                             <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
-                            <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
+                            <a href="disk.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Disk</a>
                         </div>
                     </div>
                 </div>
@@ -43,11 +42,11 @@ $other = new Other();
 
         <div class="sm:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
-                <a href="index.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-                <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
+                <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                 <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
                 <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
-                <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
+                <a href="disk.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Disk</a>
             </div>
         </div>
     </nav>
@@ -57,7 +56,7 @@ $other = new Other();
 
         <section class="m-8 flex-block">
 
-            <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+        <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         OS
@@ -152,5 +151,4 @@ $other = new Other();
         </section>
     </body>
 
-    <script src="assets/js/script.js"></script>
 </html>
