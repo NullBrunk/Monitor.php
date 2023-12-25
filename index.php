@@ -87,8 +87,8 @@
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-memory  mr-6"></i>
                         </div>
                         <div>
-                            <h1 id="used" class="text-white text-2xl font-bold"><?= $ram -> get_ram_used() . " Gb" ?></h1>
-                            <p id="total" class="text-xs font-bold text-slate-500">On <?= $ram -> get_ram_total() ?> Gb</p>
+                            <h1 id="used" class="text-white text-2xl font-bold"><?= $ram -> get_usage() . " Gb" ?></h1>
+                            <p id="total" class="text-xs font-bold text-slate-500">On <?= $ram -> get_total() ?> Gb</p>
                         </div>
                     </div>                   
                 </div>
@@ -106,7 +106,7 @@
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-hdd  mr-6"></i>
                         </div>
                         <div>
-                            <h1 class="text-white text-2xl font-bold"><?= Disk::get_used() ?> Gb</h1>
+                            <h1 class="text-white text-2xl font-bold"><?= Disk::get_usage() ?> Gb</h1>
                             <p class="text-xs font-bold text-slate-500">On <?= Disk::get_total() ?> Gb</p>
                         </div>
                     </div>                   

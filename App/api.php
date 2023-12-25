@@ -7,12 +7,12 @@ Autoloader::register();
 
 if(isset($_GET["ram"])) {
     $ram = new RAM();
-    echo $ram -> get_ram_used();
+    echo $ram -> get_usage();
 }
 
 else if(isset($_GET["ram_percent"])) {
     $ram = new RAM();
-    echo $ram -> get_ram_used_percent();
+    echo $ram -> get_usage_percent();
 }
 
 else if(isset($_GET["cpu"])) {

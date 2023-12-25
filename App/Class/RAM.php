@@ -17,19 +17,19 @@ class RAM {
         return round((int)$unit_in_kb / pow(10, 6), 2);
     }
 
-    public function get_ram_total() {
+    public function get_total() {
         $kb_ram_total = explode(":", $this -> parsable_meminfo[0])[1];
         return $this -> kb_to_gb($kb_ram_total);
     }
 
-    public function get_ram_used() {
+    public function get_usage() {
         $kb_ram_used = explode(":", $this -> parsable_meminfo[2])[1];
-        $used = $this -> get_ram_total() - $this -> kb_to_gb($kb_ram_used); 
+        $used = $this -> get_total() - $this -> kb_to_gb($kb_ram_used); 
 
         return $used;
     }
 
-    public function get_ram_used_percent() {
-        return $this -> get_ram_used() / $this -> get_ram_total() * 100;
+    public function get_usage_percent() {
+        return $this -> get_usage() / $this -> get_total() * 100;
     }
 }

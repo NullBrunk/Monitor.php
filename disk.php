@@ -2,8 +2,6 @@
     require_once "App/Class/Autoloader.php";
     Autoloader::register();
 
-    $ram = new RAM();
-    $other = new Other();
 ?>
 
 <!DOCTYPE html>
@@ -55,99 +53,54 @@
 
         <section class="m-8 flex-block">
 
-        <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-indigo-400">
-                        OS
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Info</span>
-                    </div>
-                    <div class="flex">
-                        <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-laptop  mr-6"></i>
-                        </div>
-                        <div>
-                            <h1 class="text-white text-2xl font-bold">Linux</h1>
-                            <p class="text-xs font-bold text-slate-500"><?= Other::get_distrib() ?></p>
-                        </div>
-                    </div>                   
-                </div>
-            </div>
-
-
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        RAM
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage</span>
+                        Type
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-memory  mr-6"></i>
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-hdd mr-6"></i>
                         </div>
-                        <div>
-                            <h1 id="used" class="text-white text-2xl font-bold"><?= $ram -> get_ram_used() . " Gb" ?></h1>
-                            <p id="total" class="text-xs font-bold text-slate-500">On <?= $ram -> get_ram_total() ?> Gb</p>
-                        </div>
-                    </div>                   
+                        <h1 id="cpu-info" class="text-white text-4xl font-bold my-auto"><?= Disk::type() ?></h1>
+                    </div>
                 </div>
             </div>
 
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        DISK
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage</span>
+                        Usage
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-hdd  mr-6"></i>
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-device-ssd mr-6"></i>
                         </div>
                         <div>
-                            <h1 class="text-white text-2xl font-bold"><?= Disk::get_used() ?> Gb</h1>
+                            <h1 class="text-white text-2xl font-bold"><?= Disk::get_usage() ?> Gb</h1>
                             <p class="text-xs font-bold text-slate-500">On <?= Disk::get_total() ?> Gb</p>
                         </div>
                     </div>                   
                 </div>
             </div>
-
+        
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        UP
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Since</span>
+                        Usage
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-clock  mr-6"></i>
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-nvme mr-6"></i>
                         </div>
-                        <div>
-                            <h1 id="hours" class="text-white text-2xl font-bold"></h1>    
-                            <p id="time" class="text-xs font-bold text-slate-500"></p>
-                        </div>
+                        <h1 id="cpu-info" class="text-white text-4xl font-bold my-auto"><?= Disk::get_usage_percent() ?> %</h1>
+
                     </div>                   
                 </div>
             </div>
 
         </section>        
-        
-        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-            <div class="font-bold text-xl mb-2 text-indigo-400">
-                CPU
-                <span class="text-slate-500">|</span>
-                <span class="text-xs text-slate-500">Graph</span>
-            </div>  
-
-            <div>
-                <div>
-                    <canvas style="height: 53vh;" id="myChart"></canvas>
-                </div>
-            </div>
-
-        </section>
+ 
     </body>
 
 </html>
