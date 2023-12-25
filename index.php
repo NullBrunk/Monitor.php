@@ -1,9 +1,9 @@
 <?php 
-require_once "App/Class/Autoloader.php";
-Autoloader::register();
+    require_once "App/Class/Autoloader.php";
+    Autoloader::register();
 
-$ram = new RAM();
-$other = new Other();
+    $ram = new RAM();
+    $other = new Other();
 ?>
 
 <!DOCTYPE html>

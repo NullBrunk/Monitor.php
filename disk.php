@@ -1,9 +1,9 @@
 <?php 
-require_once "App/Class/Autoloader.php";
-Autoloader::register();
+    require_once "App/Class/Autoloader.php";
+    Autoloader::register();
 
-$ram = new RAM();
-$other = new Other();
+    $ram = new RAM();
+    $other = new Other();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $other = new Other();
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
-        <title>Dashboard</title>
+        <title>Disk</title>
     </head>
 
 

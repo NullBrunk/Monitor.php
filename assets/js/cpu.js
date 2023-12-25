@@ -6,7 +6,7 @@ function toggle_reload() {
     } else {
         // Stop it
         clearInterval(inter);
-        document.getElementById("thread-reload").innerHTML = `<i style="color:rgb(101 163 13);" class="bi bi-caret-right-fill"></i>`;
+        document.getElementById("thread-reload").innerHTML = `<i class="bi bi-caret-right-fill text-teal-400"></i>`;
     }
 }
 

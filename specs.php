@@ -1,7 +1,7 @@
 <?php 
-include "App/Class/Other.php";
-require_once "App/Utils/Specs.php"; 
-$content = file_get_contents("/etc/os-release");
+    include "App/Class/Other.php";
+    require_once "App/Utils/Specs.php"; 
+    $content = file_get_contents("/etc/os-release");
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +50,11 @@ $content = file_get_contents("/etc/os-release");
         </div>
     </nav>
 
+
     <body class="bg-slate-900">
-
-
         <div class="flex-block" style="margin-top: 3%;">
             <section class="mt-8 ml-8 mr-4 ascii-logo rounded  bg-slate-900 text-white overflow-scroll">
-          
+
                 <?php if(strpos($content, "arch") !== false): ?>
                     <pre class="text-fuchsia-400">
                   -`
@@ -99,6 +98,7 @@ $content = file_get_contents("/etc/os-release");
           `"Y$b._
               `"""
                         </pre>
+
                     <?php elseif(strpos($content, "rhel") !== false || strpos($osReleaseContent, 'centos') !== false): ?>
                         <pre class="text-fuchsia-400">
            .MMM..:MMMMMMM
@@ -119,7 +119,8 @@ MMMMMMMMMMM.                     MMMM
          MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
             `MMMMMMMMMMMMMMMMMMMMMMMM:
                 ``MMMMMMMMMMMMMMMMM'
-                        </pre>    
+                        </pre>   
+
                     <?php else: ?>
                         <pre class="text-fuchsia-400">
                               ......
@@ -144,7 +145,9 @@ MMMMMMMMMMM.                     MMMM
      .,,,,++++,..  .,,,,,.....,+++,.,,
                         </pre>
                     <?php endif; ?>
+
             </section>
+
 
             <section class="mt-8 mr-4 rounded overflow-scroll shadow-lg bg-slate-800 text-white specs">
                 <div class="font-bold text-xl m-4 text-indigo-400">
@@ -173,9 +176,8 @@ MMMMMMMMMMM.                     MMMM
                         </table>
                     </div>
                 </div>
+
             </section>
         </div>
-
     </body>
-
 </html>

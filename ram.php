@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
-        <title>Dashboard</title>
+        <title>RAM</title>
     </head>
 
 
@@ -44,6 +44,116 @@
     </nav>
 
     <body class="bg-slate-900">
+        <section class="m-8 mt-12 flex-block">
+            <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Model
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-cpu  mr-6"></i>
+                        </div>
+                        <div>
+                            <h1 class="text-white text-2xl font-bold"><?= $cpu -> get_name() ?></h1>
+                            <a target="_blank" href="https://www.google.com/search?&q=<?= $cpu -> get_model() ?>" class="text-xs font-bold text-sky-600"><?= $cpu -> get_model() ?></a>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Usage
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-activity mr-6"></i>
+                        </div>
+                        <h1 id="cpu-info" class="text-white text-4xl font-bold my-auto">...</h1>
+
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Cores
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-heart-pulse mr-6"></i>
+                        </div>
+                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_cores() ?></h1>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Threads
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-fullscreen-exit mr-6"></i>
+                        </div>
+                        <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_threads() ?></h1>
+                    </div>                   
+                </div>
+            </div>            
+        </section>   
+        
+
+        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white ">
+            <div class="flex justify-end">
+                <button id="thread-reload" onclick="reloading=!reloading; toggle_reload()"><i class="text-rose-700 bi bi-stop-fill"></i></button>
+            </div>  
+
+            <section class="flex">
+                
+                <table class="border-collapse table-auto w-full text-sm" style="width: 50%">
+                    <thead>
+                    <tr>
+                        <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Name</th>
+                        <th class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left" >Freq</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-white dark:bg-slate-800">
+                        <?php for($i = 0; $i < count($cpu -> get_freq()) / 2; $i++) : ?>
+                        <tr>
+                            <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400">Thread n°<?= $i ?></td>
+                            <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
+                        </tr>
+                        <?php endfor; ?>
+                    </tbody>
+                </table>
+                <p style="width: 1px; background: #414f63;"></p>
+                <table class="border-collapse table-auto w-full text-sm" style="width: 50%">
+                    <thead>
+                    <tr>
+                        <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">Name</th>
+                        <th class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left" >Freq</th>
+                    </tr>
+                    </thead>
+                    <tbody class="bg-white dark:bg-slate-800">
+                        <?php for($i = count($cpu -> get_freq()) / 2; $i < count($cpu -> get_freq()); $i++) : ?>
+                            <tr>
+                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400 ">Thread n°<?= $i ?></td>
+                                <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
+                            </tr>
+                        <?php endfor; ?>
+                    </tbody>
+                </table>
+            </section>
+            
+            
+                
+
+        </section>
+      
     </body>
 
 </html>

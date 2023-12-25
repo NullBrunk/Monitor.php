@@ -1,8 +1,8 @@
 <?php 
-require_once "App/Class/Autoloader.php";
-Autoloader::register();
+    require_once "App/Class/Autoloader.php";
+    Autoloader::register();
 
-$cpu = new CPU();
+    $cpu = new CPU();
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ $cpu = new CPU();
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
-        <title>Dashboard</title>
+        <title>CPU</title>
     </head>
 
     <nav class="bg-gray-800">
@@ -50,8 +50,7 @@ $cpu = new CPU();
     </nav>
 
     <body class="bg-slate-900">
-        <section class="m-8 flex-block">
-
+        <section class="m-8 mt-12 flex-block">
             <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
@@ -63,8 +62,23 @@ $cpu = new CPU();
                         </div>
                         <div>
                             <h1 class="text-white text-2xl font-bold"><?= $cpu -> get_name() ?></h1>
-                            <p class="text-xs font-bold text-slate-500"><?= $cpu -> get_model() ?></p>
+                            <a target="_blank" href="https://www.google.com/search?&q=<?= $cpu -> get_model() ?>" class="text-xs font-bold text-sky-600"><?= $cpu -> get_model() ?></a>
                         </div>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Usage
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-activity mr-6"></i>
+                        </div>
+                        <h1 id="cpu-info" class="text-white text-4xl font-bold my-auto">...</h1>
+
                     </div>                   
                 </div>
             </div>
@@ -93,35 +107,15 @@ $cpu = new CPU();
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-fullscreen-exit mr-6"></i>
                         </div>
                         <h1 class="text-white text-4xl font-bold my-auto "><?= $cpu -> get_threads() ?></h1>
-
                     </div>                   
                 </div>
-            </div>
-
-            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-                <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-indigo-400">
-                        Usage
-                    </div>
-                    <div class="flex">
-                        <div class="flex m-auto mx-0 ">
-                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-activity mr-6"></i>
-                        </div>
-                        <h1 id="cpu-info" class="text-white text-4xl font-bold my-auto"><?= $cpu -> get_usage() ?> %</h1>
-
-                    </div>                   
-                </div>
-            </div>
-
-            
+            </div>            
         </section>   
         
-        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-            <div class="font-bold text-xl mb-2 text-indigo-400 flex justify-between">
-                <p>Frequency<p> 
-                    
-                <button id="thread-reload" onclick="reloading=!reloading; toggle_reload()"><i class="text-rose-700 bi bi-stop-fill"></i></button>
 
+        <section class="m-8 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white ">
+            <div class="flex justify-end">
+                <button id="thread-reload" onclick="reloading=!reloading; toggle_reload()"><i class="text-rose-700 bi bi-stop-fill"></i></button>
             </div>  
 
             <section class="flex">
@@ -136,7 +130,7 @@ $cpu = new CPU();
                     <tbody class="bg-white dark:bg-slate-800">
                         <?php for($i = 0; $i < count($cpu -> get_freq()) / 2; $i++) : ?>
                         <tr>
-                            <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-fuchsia-400">Thread n°<?= $i ?></td>
+                            <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400">Thread n°<?= $i ?></td>
                             <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
                         </tr>
                         <?php endfor; ?>
@@ -153,17 +147,13 @@ $cpu = new CPU();
                     <tbody class="bg-white dark:bg-slate-800">
                         <?php for($i = count($cpu -> get_freq()) / 2; $i < count($cpu -> get_freq()); $i++) : ?>
                             <tr>
-                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-fuchsia-400 ">Thread n°<?= $i ?></td>
+                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400 ">Thread n°<?= $i ?></td>
                                 <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
                             </tr>
                         <?php endfor; ?>
                     </tbody>
                 </table>
             </section>
-            
-            
-                
-
         </section>
       
     </body>
