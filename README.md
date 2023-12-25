@@ -11,24 +11,22 @@
 
 </div>
 
-A PHP monitoring website that displays system metrics in real-time, using PHP for the backend and API, JavaScript in client-side for self-actualization, and TailwindCSS for the front-end part.
+A PHP monitoring website that displays system metrics in real-time. I chose to use PHP for the backend/API, JavaScript on the client side for self-actualization, and TailwindCSS for the frontend.
 
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/7aae431c-92cd-4572-98d3-d245b3d06681
 
 
 # Specs page
-The specs page displays a bunch of information related to the machine hosting this monitoring website.
+The specs page displays a variety of information related to the machine hosting the monitoring website.
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/d591215c-b617-4337-9297-506c507a1aa6)
 
 
 # Responsive !
-All pages of this website adapt according to the screen size.
-
-https://github.com/NullBrunk/PHPMonitor/assets/125673909/ae8f71ba-beba-403d-81b4-e06d5db78458
+All pages of this project are responsive, meaning they adapt to the screen size accordingly.
 
 
 # Thanks
 
-- https://github.com/dylanaraps/neofetch for the ascii logos on specs page.
+- https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/specs.php">the specs</a> page.
