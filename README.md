@@ -20,7 +20,7 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f
 # Specs page
 The specs page displays a variety of information related to the machine hosting the monitoring website.
 
-![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/d591215c-b617-4337-9297-506c507a1aa6)
+![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/183aeef7-519d-4e8a-9429-3c2130c0b353)
 
 
 # Responsive !
