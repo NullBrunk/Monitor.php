@@ -31,7 +31,7 @@ let ch = new Chart(cvs, {
 });
 
 setInterval(() => {
-    fetch("api/api.php?ram").then((resp) => {
+    fetch("App/api.php?ram").then((resp) => {
         resp.json().then((data) => {
             document.getElementById("used").innerHTML =  `${data} Gb`;
         })
@@ -39,7 +39,7 @@ setInterval(() => {
 }, 1000)
 
 setInterval(() => {
-    fetch("api/api.php?uptime").then((resp) => {
+    fetch("App/api.php?uptime").then((resp) => {
         resp.json().then((data) => {
             if(data["days"] !== 0) {
                 document.getElementById("hours").innerHTML = data["days"];
@@ -50,7 +50,7 @@ setInterval(() => {
 }, 1000)
 
 setInterval(() => {
-    fetch("api/api.php?cpu").then((resp) => {
+    fetch("App/api.php?cpu").then((resp) => {
         resp.json().then((data) => {
             datas.shift();
             datas.push(data);
@@ -59,3 +59,4 @@ setInterval(() => {
         })
     })
 }, 2000)
+

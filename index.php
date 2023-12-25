@@ -1,5 +1,9 @@
-<?php
-    include_once "utils/consts.php";
+<?php 
+require_once "App/Class/Autoloader.php";
+Autoloader::register();
+
+$ram = new RAM();
+$other = new Other();
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +69,7 @@
                         </div>
                         <div>
                             <h1 class="text-white text-2xl font-bold">Linux</h1>
-                            <p class="text-xs font-bold text-slate-500"><?= $DISTRIB ?></p>
+                            <p class="text-xs font-bold text-slate-500"><?= Other::get_distrib() ?></p>
                         </div>
                     </div>                   
                 </div>
@@ -84,8 +88,8 @@
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-memory  mr-6"></i>
                         </div>
                         <div>
-                            <h1 id="used" class="text-white text-2xl font-bold"></h1>
-                            <p id="total" class="text-xs font-bold text-slate-500">On <?= $RAM_TOTAL ?> Gb</p>
+                            <h1 id="used" class="text-white text-2xl font-bold"><?= $ram -> get_ram_used() . " Gb" ?></h1>
+                            <p id="total" class="text-xs font-bold text-slate-500">On <?= $ram -> get_ram_total() ?> Gb</p>
                         </div>
                     </div>                   
                 </div>
@@ -103,8 +107,8 @@
                             <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full  bi bi-hdd  mr-6"></i>
                         </div>
                         <div>
-                            <h1 class="text-white text-2xl font-bold"><?= $DISK_USAGE ?> Gb</h1>
-                            <p class="text-xs font-bold text-slate-500">On <?= $DISK_TOTAL ?> Gb</p>
+                            <h1 class="text-white text-2xl font-bold"><?= Disk::get_used() ?> Gb</h1>
+                            <p class="text-xs font-bold text-slate-500">On <?= Disk::get_total() ?> Gb</p>
                         </div>
                     </div>                   
                 </div>

@@ -1,7 +1,11 @@
 <?php 
-    include_once "utils/distro_logo.php"; 
-    include_once "utils/specs.php"; 
-    $content = file_get_contents("/etc/os-release");
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+
+require_once "App/Utils/specs.php"; 
+$content = file_get_contents("/etc/os-release");
 ?>
 
 <!DOCTYPE html>
