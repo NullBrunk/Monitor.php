@@ -1,4 +1,4 @@
-<?php 
+<?php  
 header("Content-type: application/json");
 
 require_once "./Class/Autoloader.php";

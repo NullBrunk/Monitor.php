@@ -1,11 +1,26 @@
 <?php
 
+/**
+ * This class is an interface that facilitates the retrieval 
+ * of various information.
+ */
 class Other {
 
+    /**
+     * Get the linux distribution name
+     *
+     * @return string
+     */
     public static function get_distrib() {
-        echo explode('"', file_get_contents("/etc/os-release"))[1];
+        return explode('"', file_get_contents("/etc/os-release"))[1];
     }
 
+
+    /**
+     * Get the current uptime of the machine
+     *
+     * @return string 
+     */
     public static function get_uptime() {
         $time = floatval(file_get_contents('/proc/uptime'));
     
@@ -44,6 +59,12 @@ class Other {
         ]);
     }
 
+
+    /**
+     * Get the linux kernel version
+     *
+     * @return string
+     */
     static function get_linux_version() {
         preg_match(
             '/Linux version ([^\s]+)/', 

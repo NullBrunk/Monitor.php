@@ -1,31 +1,41 @@
 <?php
 
+/**
+ * This class is an interface that facilitates the retrieval 
+ * of various Disk-related information.
+ */
 class Disk {
 
+    /**
+     * Convert bytes to gigabytes and round it to 0 after the ,
+     *
+     * @param int|string $in_bytes     The thing to convert in GB
+     * 
+     * @return int
+     */
     static function to_gb($in_bytes) {
         return round((int)$in_bytes / pow(10, 9), 0);
     }
+
+
+    /**
+     * Get the total space of the disk in GB
+     *
+     * @return int
+     */
     static function get_total() {
         return self::to_gb(disk_total_space("/"));
     }
+
+
+    /**
+     * Get the used space in GB
+     *
+     * @return int
+     */
     static function get_usage() {
+        // Total space - Free space = Used space
         return self::get_total() - self::to_gb(disk_free_space("/"));
     }
-    
-    static function get_usage_percent() {
-        $percent = self::get_usage() / self::get_total() * 100;
-        return round($percent, 2);
-    }
-
-    static function type() {
-        $device = scandir("/sys/block")[2];
-        if(str_contains($device, "nvme")) {
-            return "NVME";
-        } else {
-            $to_parse = file_get_contents("/sys/block/" . $device . "/queue/rotational");
-            return ($to_parse == "0") ? "SSD" : "HDD";
-        }
-    }
-    
 }
 
