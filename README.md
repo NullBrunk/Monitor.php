@@ -30,13 +30,60 @@ The CPU pages displays a variety of informations linked with the CPU, as well as
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/7e5a01b2-fd67-4a9a-847b-89287921b6cb
 
 
-
 # Responsive !
 All pages of this project are responsive, meaning they adapt to the screen size accordingly.
 
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/6f9abaaa-a5c2-4f90-a2f6-ab6b9ba9eac4
 
+# Installation
+
+Install an HTTP server and PHP on your machine then, 
+
+```bash
+cd /srv/http || cd /var/www/html
+sudo git clone https://github.com/NullBrunk/PHPMonitor
+```
+
+Configure your HTTP server to execute PHP, then start it, then go to
+<a href="http://127.0.0.1/PHPMonitor/">http://127.0.0.1/PHPMonitor</a>
+
+
+# Doc
+Class files are in /App/Class
+
+### CPU
+| Method         | Description                          | 
+|---             |:--                                   | 
+| get_usage      | Get CPU usage in %                   |
+| get_model      | Get the CPU model                    |
+| get_cores      | Get the number of cores              |
+| get_threads    | Get the number of threads            |
+| get_name       | Get the vendor name                  |
+| get_freq       | Get the frequency of every thread    |
+
+
+### RAM
+| Method            | Description                     | 
+|---                |:--                              | 
+| get_total         | Get total amont of RAM in Gb    |
+| get_usage         | Get RAM used in Gb              |
+| get_usage_percent | Get RAM used in %               |
+
+
+### Disk
+| Method         | Description                           | 
+|---             |:--                                    | 
+| get_total      | Get total amount of disk space in Gb  |
+| get_usage      | Get disk used in Gb                   |
+
+
+### Other
+| Method               | Description                          | 
+|---                   |:--                                   | 
+| get_distrib          | Get the linux distribution name      |
+| get_linux_version    | Get the linux kernel version         |
+| get_uptime           | Get the machine uptme                |
 
 
 
