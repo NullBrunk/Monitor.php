@@ -15,7 +15,7 @@ A PHP monitoring website that displays system metrics in real-time. I chose to u
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f-25ef20b8e78c
 
-## Menu
+**Menu**
 - <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#specs-page">Specs page</a>
 - <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#cpu-page">CPU page</a>
 - <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#responsive-">Responsive</a>
