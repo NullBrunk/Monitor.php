@@ -9,7 +9,7 @@
 
 </div>
 
-A PHP monitoring website that displays system metrics in real-time. I chose to use PHP for the backend/API, JavaScript on the client side for self-actualization, and TailwindCSS for the frontend.
+Display system metrics in real-time with a PHP backend, a JavaScript client side with self-actualization, and TailwindCSS for the frontend.
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f-25ef20b8e78c
 
