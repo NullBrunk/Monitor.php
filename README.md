@@ -34,15 +34,14 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/6f9abaaa-a5c2-4f90-a2f6
 
 # ⚒️ Installation
 
-Install an HTTP server and PHP on your machine then, 
+Install an HTTP server and PHP on your machine then, configure your HTTP server to execute PHP
 
 ```bash
 cd /srv/http || cd /var/www/html
 sudo git clone https://github.com/NullBrunk/PHPMonitor
 ```
 
-Configure your HTTP server to execute PHP, then start it, then go to
-<a href="http://127.0.0.1/PHPMonitor/">http://127.0.0.1/PHPMonitor</a>
+Start your HTTP servet, and go to http://127.0.0.1/PHPMonitor/>
 
 
 # ⚙️ Doc
