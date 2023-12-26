@@ -114,7 +114,7 @@
                 <button id="thread-reload" onclick="reloading=!reloading; toggle_reload()"><i class="text-rose-700 bi bi-stop-fill"></i></button>
             </div>  
 
-            <section class="flex">
+            <section class="flex direction">
                 
                 <table class="border-collapse table-auto w-full text-sm" style="width: 50%">
                     <thead>

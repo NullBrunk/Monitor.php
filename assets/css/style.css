@@ -38,6 +38,10 @@ pre {
     margin: auto !important;
 }
 
+.direction {
+    flex-direction: row;
+}
+
 
 @media(max-width: 700px) {
     .flex-block {
@@ -67,5 +71,10 @@ pre {
 
     .none-sm {
         display: none;
+    }
+
+
+    .direction {
+        flex-direction: column;
     }
 }
