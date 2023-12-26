@@ -13,6 +13,13 @@
 
 A PHP monitoring website that displays system metrics in real-time. I chose to use PHP for the backend/API, JavaScript on the client side for self-actualization, and TailwindCSS for the frontend.
 
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#specs-page">Specs page</a>
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#cpu-page">CPU page</a>
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#responsive-">Responsive</a>
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#installation">Installation</a>
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#doc">Documentation</a>
+- <a href="https://github.com/NullBrunk/PHPMonitor/tree/main#thanks">Thanks</a>
+
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f-25ef20b8e78c
 
