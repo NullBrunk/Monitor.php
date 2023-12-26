@@ -32,7 +32,7 @@ All pages of this project are responsive, meaning they adapt to the screen size 
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/6f9abaaa-a5c2-4f90-a2f6-ab6b9ba9eac4
 
-# 📖 Installation
+# ⚒️ Installation
 
 Install an HTTP server and PHP on your machine then, 
 
