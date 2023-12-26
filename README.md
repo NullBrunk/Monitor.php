@@ -13,13 +13,13 @@ Display system metrics in real-time with a PHP backend, a JavaScript client side
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f-25ef20b8e78c
 
-# 💻 Specs page
+# 💻 Specs
 The specs page displays a variety of information related to the machine hosting the monitoring website.
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/bc6eb743-6a87-4956-970e-a7ed0034f5e0)
 
 
-# 🔳 CPU Page
+# 🔳 CPU
 
 The CPU pages displays a variety of informations linked with the CPU, as well as the frequency of every thread actualized in realtime. You can stop this actualization by clicking on the stop button like shown in this video.
 
