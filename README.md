@@ -22,10 +22,22 @@ The specs page displays a variety of information related to the machine hosting 
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/bc6eb743-6a87-4956-970e-a7ed0034f5e0)
 
+
 # CPU Page
+
+The CPU pages displays a variety of informations linked with the CPU, as well as the frequency of every thread actualized in realtime. You can stop this actualization by clicking on the stop button like shown in this video.
+
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/7e5a01b2-fd67-4a9a-847b-89287921b6cb
+
+
 
 # Responsive !
 All pages of this project are responsive, meaning they adapt to the screen size accordingly.
+
+
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/6f9abaaa-a5c2-4f90-a2f6-ab6b9ba9eac4
+
+
 
 
 # Thanks
