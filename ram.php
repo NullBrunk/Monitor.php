@@ -50,15 +50,15 @@
                 <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
                 <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
 
-            
             </div>
         </div>
     </nav>
 
     <body class="bg-slate-900">
         <section class="m-8 mt-12 flex-block">
-            <div class="w-50 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-                <div class="px-6 py-3">
+            <div class="w-25 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                
+                <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         RAM
                     </div>
@@ -73,9 +73,22 @@
                     </div>                   
                 </div>
             </div>
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-3 mb-2">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        RAM 
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-percent mr-6"></i>
+                        </div>
+                        <h1 id="ram-percent" class="text-white text-4xl font-bold my-auto "> <?= round($ram -> get_usage_percent()) . "%" ?></h1>
+                    </div>                   
+                </div>
+            </div>  
 
-            <div class="w-50 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
-                <div class="px-6 py-3">
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         Swap 
                     </div>
@@ -90,14 +103,27 @@
                     </div>                   
                 </div>
             </div>   
+            <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+                <div class="px-6 py-3 mb-2">
+                    <div class="font-bold text-xl mb-2 text-indigo-400">
+                        Swap 
+                    </div>
+                    <div class="flex">
+                        <div class="flex m-auto mx-0 ">
+                            <i class="text-2xl h-14 px-4 py-3 bg-slate-600 rounded-full bi bi-percent mr-6"></i>
+                        </div>
+                        <h1 id="swap-percent" class="text-white text-4xl font-bold my-auto "> <?= $ram -> get_swap_usage_percent() . "%" ?></h1>
+                    </div>                   
+                </div>
+            </div>   
 
 
       
         </section>   
         
-        <section class="m-8 mt-12 ram-more">
+        <section class="m-8 mt-8 ram-more flex direction">
 
-            <div id="card-ram" class="bg-slate-800 shadow-sm overflow-hidden rounded-lg">
+            <div class="bg-slate-800 shadow-sm overflow-hidden rounded-lg w-30">
                 <table class="border-collapse table-auto w-full text-sm mt-4">
                     <thead>
                         <tr>
@@ -121,7 +147,7 @@
 
 
 
-            <div class="w-50 m-8 ml-1 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
+            <div class="w-70 ml-4 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="font-bold text-xl mb-2 text-indigo-400">
                     RAM
                     <span class="text-slate-500">|</span>
@@ -129,12 +155,12 @@
                 </div>  
                 <div>
                     <div>
-                        <canvas style="height: 53vh;" id="ramChart"></canvas>
+                        <canvas style="height: 50vh;" id="ramChart"></canvas>
                     </div>
                 </div>
             </div>
         </section>
 
+        <script src="assets/js/ram.js"></script>
     </body>
-    <script src="assets/js/ram.js"></script>
 </html>

@@ -94,6 +94,10 @@ class RAM {
         return $this -> kb_to_gb($used_swap);
     }
 
+    public function get_swap_usage_percent() {
+        return round($this -> get_swap_usage() / $this -> get_swap_total() * 100);
+    }
+
     public function get_max_capa_ram() {
         preg_match(
             '/Maximum Capacity: (.*)/', 

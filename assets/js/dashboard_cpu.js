@@ -17,6 +17,8 @@ let cpu = new Chart(cpu_cvs, {
         maintainAspectRatio: false,
         scales: {
             y: {
+                suggestedMin: 0, // Valeur minimale pour l'axe Y
+                suggestedMax: 100, // Valeur maximale pour l'axe Y
                 beginAtZero: true
             }
         },

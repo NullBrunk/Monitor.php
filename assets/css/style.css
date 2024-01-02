@@ -2,8 +2,16 @@
     width: 25%;
 } 
 
+.w-30 {
+    width: 30%;
+}
+
 .w-50 {
     width: 50%;
+}
+
+.w-70 {
+    width: 70%;
 }
 
 .mr-mt {
@@ -48,10 +56,6 @@ pre {
     display: flex;
 }
 
-.ram-more #card-ram {
-    width: 30%;
-}
-
 
 @media(max-width: 700px) {
     .flex-block {
@@ -59,8 +63,10 @@ pre {
     } 
 
     .w-25,
-    .w-50 {
-        width: 100%;
+    .w-50,
+    .w-70,
+    .w-30 {
+        width: 100% !important;
         margin: 20px 20px 0px 0px !important;
     }
 

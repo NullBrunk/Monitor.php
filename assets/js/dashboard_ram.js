@@ -17,7 +17,9 @@ let ram = new Chart(ram_cvs, {
         maintainAspectRatio: false,
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                suggestedMin: 0, // Valeur minimale pour l'axe Y
+                suggestedMax: 100, // Valeur maximale pour l'axe Y
             }
         },
         animation: {
