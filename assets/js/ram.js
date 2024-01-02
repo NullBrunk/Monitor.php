@@ -2,7 +2,9 @@ Chart.defaults.backgroundColor = '#9BD0F5';
 Chart.defaults.borderColor = '#555555';
 Chart.defaults.color = '#FFFFFF';  
 
-let ram_datas = [0, 0, 0, 0, 0, 0];
+let ram_datas = [0, 0, 0, 0, 0, 0]
+let swap_datas = [0, 0, 0, 0, 0, 0]
+
 const ram_cvs = document.getElementById('ramChart');  
 
 let ram = new Chart(ram_cvs, {
@@ -12,6 +14,12 @@ let ram = new Chart(ram_cvs, {
         datasets: [{
             label: 'RAM Usage',
             data: ram_datas,
+            borderWidth: 1,
+            fill: false,
+            tension: 0.5
+        }, {
+            label: 'SWAP Usage',
+            data: swap_datas,
             borderWidth: 1,
             fill: false,
             tension: 0.5
@@ -37,11 +45,18 @@ setInterval(() => {
         resp.json().then((data) => {
             ram_datas.shift();
             ram_datas.push(data);
-
-            ram.data.datasets[0].data = ram_datas;
             ram.update();
         })
-    })
+    });
+
+    fetch("App/api.php?swap_percent").then((resp) => {
+        resp.json().then((data) => {
+            swap_datas.shift();
+            swap_datas.push(data);  
+            ram.update();
+        })
+    });
+
 }, 1000)
 
 

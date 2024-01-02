@@ -60,7 +60,9 @@
                 
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        RAM
+                        RAM                    
+                        <span class="text-slate-500">|</span>
+                        <span class="text-xs text-slate-500">Usage in Gb</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -76,7 +78,9 @@
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        RAM 
+                        RAM
+                        <span class="text-slate-500">|</span>
+                        <span class="text-xs text-slate-500">Usage in %</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -90,7 +94,9 @@
             <div class="w-25 mr-mt rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
-                        Swap 
+                        Swap
+                        <span class="text-slate-500">|</span>
+                        <span class="text-xs text-slate-500">Usage in Gb</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -107,6 +113,8 @@
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         Swap 
+                        <span class="text-slate-500">|</span>
+                        <span class="text-xs text-slate-500">Usage in %</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -149,13 +157,13 @@
 
             <div class="w-70 ml-4 px-6 py-4 rounded overflow-hidden shadow-lg bg-slate-800 text-white">
                 <div class="font-bold text-xl mb-2 text-indigo-400">
-                    RAM
+                    Graph
                     <span class="text-slate-500">|</span>
                     <span class="text-xs text-slate-500">Usage in %</span>
                 </div>  
                 <div>
                     <div>
-                        <canvas style="height: 50vh;" id="ramChart"></canvas>
+                        <canvas style="height: 49vh;" id="ramChart"></canvas>
                     </div>
                 </div>
             </div>

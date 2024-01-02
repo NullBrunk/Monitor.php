@@ -34,7 +34,6 @@ setInterval(() => {
             ram_datas.shift();
             ram_datas.push(data);
 
-            ram.data.datasets[0].data = ram_datas;
             ram.update();
         })
     })

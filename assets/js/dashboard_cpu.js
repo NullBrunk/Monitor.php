@@ -34,7 +34,6 @@ setInterval(() => {
             cpu_datas.shift();
             cpu_datas.push(data);
 
-            cpu.data.datasets[0].data = cpu_datas;
             cpu.update();
         })
     })

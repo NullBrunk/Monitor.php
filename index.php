@@ -161,7 +161,7 @@
                 </div>  
                 <div>
                     <div>
-                        <canvas style="height: 53vh;" id="ramChart"></canvas>
+                        <canvas style="height: 52vh;" id="ramChart"></canvas>
                     </div>
                 </div>
             </div>
