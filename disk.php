@@ -2,7 +2,7 @@
     require_once "App/Class/Autoloader.php";
     Autoloader::register();
 
-    $cpu = new CPU();
+    $disk = new Disk();
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
-        <title>CPU</title>
+        <title>Disk</title>
     </head>
 
     <nav class="bg-gray-800">
@@ -27,11 +27,11 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
-                            <a href="cpu.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">CPU</a>
+                            <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>                            
                             <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                             <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
-                            <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
-                        
+                            <a href="disk.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Disk</a>
+
                         </div>
                     </div>
                 </div>
@@ -42,11 +42,10 @@
         <div class="sm:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
-                <a href="cpu.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">CPU</a>
+                <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
                 <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
                 <a href="specs.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Specs</a>
-                <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
-            
+                <a href="disk.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Disk</a>
             </div>
         </div>
     </nav>
@@ -132,7 +131,7 @@
                     <tbody class="bg-white dark:bg-slate-800">
                         <?php for($i = 0; $i < count($cpu -> get_freq()) / 2; $i++) : ?>
                         <tr>
-                            <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400">Thread n°<?= $i + 1 ?></td>
+                            <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400">Thread n°<?= $i ?></td>
                             <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
                         </tr>
                         <?php endfor; ?>
@@ -149,7 +148,7 @@
                     <tbody class="bg-white dark:bg-slate-800">
                         <?php for($i = count($cpu -> get_freq()) / 2; $i < count($cpu -> get_freq()); $i++) : ?>
                             <tr>
-                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400 ">Thread n°<?= $i + 1 ?></td>
+                                <td class="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 font-bold text-indigo-400 ">Thread n°<?= $i ?></td>
                                 <td id="thread<?=$i?>" class="border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><?= $cpu -> get_freq()[$i] ?></td>
                             </tr>
                         <?php endfor; ?>

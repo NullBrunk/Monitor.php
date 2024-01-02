@@ -41,7 +41,18 @@ cd /srv/http || cd /var/www/html
 sudo git clone https://github.com/NullBrunk/PHPMonitor
 ```
 
-Start your HTTP servet, and go to http://127.0.0.1/PHPMonitor/>
+The program needs to get the output of certain root command, but we cannot give the root permission to the program or to the apache/nginx user cause this would constitute a lack of security.
+
+So after installing type those commands:
+```bash
+cd PHPMonitor/App/Utils/info/
+
+sudo dmidecode --type 16,17 > raminfo.txt
+sudo lspci -vv > lspci.txt
+```
+
+
+Start your HTTP servet, and go to http://127.0.0.1/PHPMonitor/
 
 
 # ⚙️ Doc
@@ -59,11 +70,19 @@ Class files are in /App/Class
 
 
 ### RAM
-| Method            | Description                     | 
-|---                |:--                              | 
-| get_total         | Get total amont of RAM in Gb    |
-| get_usage         | Get RAM used in Gb              |
-| get_usage_percent | Get RAM used in %               |
+| Method                 | Description                                    | 
+|---                     |:--                                             | 
+| get_total              | Get total amont of RAM in Gb                   |
+| get_usage              | Get RAM used in Gb                             |
+| get_usage_percent      | Get RAM used in %                              |
+| get_speed              | Get RAM speed in MT/s                          |
+| get_ddr_version        | Get type of RAM (ddr3/ddr4/ddr5)               |
+| get_swap_total         | Get SWAP capacity in Gb                        |
+| get_swap_usage         | Get SWAP Used in Gb                            |
+| get_max_capa_ram       | Get maximum installable RAM                    |
+| get_number_of_slots    | Get the number of slots                        |
+| get_theorical_capacity | Get amount of RAM in Gb that the RAM stick has |
+
 
 
 ### Disk

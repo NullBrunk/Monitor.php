@@ -8,7 +8,7 @@
 class CPU {
    
     // This attribute contains the content of the /proc/cpuinfo file
-    public string $cpuinfo;
+    private string $cpuinfo;
 
     public function __construct() {
         $this -> cpuinfo = file_get_contents("/proc/cpuinfo");    
@@ -21,7 +21,7 @@ class CPU {
      *
      * @return array     The array of matches
      */
-    public function apply_regex_on_proc_stat() {
+    private function apply_regex_on_proc_stat() {
         preg_match('/^cpu\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/', file_get_contents("/proc/stat"), $matches);
         return $matches;
     }
@@ -33,7 +33,7 @@ class CPU {
      *
      * @return array
      */
-    public function cpu_info() {
+    private function cpu_info() {
         $matches = $this -> apply_regex_on_proc_stat();
         return array_slice($matches, 1);
     }

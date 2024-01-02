@@ -13,7 +13,7 @@ class Disk {
      * 
      * @return int
      */
-    static function to_gb($in_bytes) {
+    static private function to_gb($in_bytes) {
         return round((int)$in_bytes / pow(10, 9), 0);
     }
 
@@ -37,5 +37,8 @@ class Disk {
         // Total space - Free space = Used space
         return self::get_total() - self::to_gb(disk_free_space("/"));
     }
+
+
+    
 }
 
