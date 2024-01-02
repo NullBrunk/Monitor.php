@@ -61,8 +61,6 @@
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         RAM                    
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage in Gb</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -79,8 +77,6 @@
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         RAM
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage in %</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -95,8 +91,6 @@
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         Swap
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage in Gb</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -113,8 +107,6 @@
                 <div class="px-6 py-3 mb-2">
                     <div class="font-bold text-xl mb-2 text-indigo-400">
                         Swap 
-                        <span class="text-slate-500">|</span>
-                        <span class="text-xs text-slate-500">Usage in %</span>
                     </div>
                     <div class="flex">
                         <div class="flex m-auto mx-0 ">
@@ -159,7 +151,7 @@
                 <div class="font-bold text-xl mb-2 text-indigo-400">
                     Graph
                     <span class="text-slate-500">|</span>
-                    <span class="text-xs text-slate-500">Usage in %</span>
+                    <span class="text-xs text-slate-500">%</span>
                 </div>  
                 <div>
                     <div>
