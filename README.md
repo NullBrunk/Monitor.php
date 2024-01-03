@@ -97,7 +97,7 @@ Class files are in /App/Class
 ### TOP
 | Method                              | Description                           | 
 |---                                  |:--                                    | 
-| get_process_sorted_by_cpu           | Get processes sorted by parameter  |
+| get_sorted_process           | Get processes sorted by parameter  |
 
 
 ### Other
