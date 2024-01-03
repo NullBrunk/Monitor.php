@@ -11,7 +11,6 @@ Display system metrics in real-time with a PHP backend, a JavaScript client side
 </div>
 
 
-
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c-fa6064ace70e
 
 
