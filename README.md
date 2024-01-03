@@ -81,6 +81,7 @@ Class files are in /App/Class
 | get_ddr_version        | Get type of RAM (ddr3/ddr4/ddr5)               |
 | get_swap_total         | Get SWAP capacity in Gb                        |
 | get_swap_usage         | Get SWAP Used in Gb                            |
+| get_swap_usage_percent | Get SWAP used in %                             |
 | get_max_capa_ram       | Get maximum installable RAM                    |
 | get_number_of_slots    | Get the number of slots                        |
 | get_theorical_capacity | Get amount of RAM in Gb that the RAM stick has |
@@ -92,6 +93,11 @@ Class files are in /App/Class
 |---             |:--                                    | 
 | get_total      | Get total amount of disk space in Gb  |
 | get_usage      | Get disk used in Gb                   |
+
+### TOP
+| Method                              | Description                           | 
+|---                                  |:--                                    | 
+| get_process_sorted_by_cpu           | Get processes sorted by parameter  |
 
 
 ### Other
