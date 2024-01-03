@@ -11,7 +11,9 @@ Display system metrics in real-time with a PHP backend, a JavaScript client side
 </div>
 
 
-https://github.com/NullBrunk/PHPMonitor/assets/125673909/e1843c88-1604-4c81-ae99-d982080a6db3
+
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c-fa6064ace70e
+
 
 
 
@@ -19,21 +21,35 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/e1843c88-1604-4c81-ae99
 # 💻 System
 The system page displays a variety of information related to the machine hosting the monitoring website.
 
-![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/bc6eb743-6a87-4956-970e-a7ed0034f5e0)
+![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/182d47c1-8a0f-4e09-aa9b-c8311605f042)
 
 
 # 🔳 CPU
 
-The CPU pages displays a variety of informations linked with the CPU, as well as the frequency of every thread actualized in realtime. You can stop this actualization by clicking on the stop button like shown in this video.
+The CPU page displays various informations related to the CPU, including real-time updates of the frequency for each thread. You can stop this updating by clicking on the stop button, as demonstrated in this video.
 
-https://github.com/NullBrunk/PHPMonitor/assets/125673909/7e5a01b2-fd67-4a9a-847b-89287921b6cb
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/e68a3c16-911c-4cb4-b09e-c62ed6f2a3ad
+
+# 💾 RAM
+
+The RAM page displays various informations related to the volatile memory (RAM) and to the SWAP, with real-time graph and metrics as shown in this video.
+
+
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/332354e2-87ef-494e-968e-6553bba30def
+
+
+# ⚙️ TOP 
+
+The TOP page displays various real-time informations related to the processes. You can sort thoses processes by RAM/CPU consumption with the right select menu as demonstrated in the video.
+
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/86e69d90-7355-4d02-954b-b1cac25f9c6f
+
 
 
 # ✨ Responsive
 All pages of this project are responsive, meaning they adapt to the screen size accordingly.
 
 
-https://github.com/NullBrunk/PHPMonitor/assets/125673909/6f9abaaa-a5c2-4f90-a2f6-ab6b9ba9eac4
 
 # ⚒️ Installation
 
