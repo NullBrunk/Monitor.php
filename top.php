@@ -62,8 +62,8 @@
                     </div>
 
                     <div>
-                        <span class="text-xs text-slate-500">Sorted by:</span>
-                        <select id="sort-input" class="text-xs text-white bg-indigo-400 rounded-full p-1">
+                        <span class="text-xs text-indigo-400 mr-2">SORTED BY:</span>
+                        <select id="sort-input" class="text-xs text-white bg-sky-600 rounded-full p-1">
                             <option value="cpu">CPU</option>
                             <option value="mem">MEM</option>
                         </select>
@@ -71,7 +71,7 @@
 
                 </div>
 
-                <div class="relative rounded-xl overflow-auto" style="height: 75vh;">
+                <div class="relative rounded-xl overflow-auto" style="height: 74vh;">
                     <div class="shadow-sm overflow-hidden my-8">
                         <table class="border-collapse table-auto w-full text-sm" >
                             <thead>
