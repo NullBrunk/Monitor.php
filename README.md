@@ -128,6 +128,6 @@ All the classes provided in <a href="https://github.com/NullBrunk/PHPMonitor/tre
 | get_uptime           | Get the machine uptme                |
 
 
-# Thanks
+# 🤝 Thanks
 
 - https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/system.php">the system</a> page.
