@@ -40,7 +40,7 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/332354e2-87ef-494e-968e
 
 # ⚙️ TOP 
 
-The TOP page displays various real-time informations related to the processes. You can sort thoses processes by RAM/CPU consumption with the right select menu as demonstrated in the video.
+The TOP page displays various real-time informations related to the processes. You can sort theses processes by RAM/CPU consumption with the right select menu as demonstrated in the video.
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/86e69d90-7355-4d02-954b-b1cac25f9c6f
 
@@ -65,7 +65,7 @@ sudo git clone https://github.com/NullBrunk/PHPMonitor
 
 The program needs to get the output of certain root command, but we cannot give the root permission to the program or to the apache/nginx user cause this would constitute a lack of security.
 
-So after installing type those commands:
+So after installing type these commands:
 ```bash
 cd PHPMonitor/App/Utils/info/
 
