@@ -12,7 +12,4 @@ class TOP {
     }
 
 }
-
-TOP::get_process_sorted_by_cpu();
-
 ?>
