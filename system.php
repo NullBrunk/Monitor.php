@@ -1,6 +1,7 @@
 <?php 
+
     include "App/Class/Other.php";
-    require_once "App/Utils/Specs.php"; 
+    require_once "App/Utils/System.php"; 
     $content = file_get_contents("/etc/os-release");
 ?>
 
@@ -16,7 +17,7 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/tailwind.css">
 
-        <title>Specs</title>
+        <title>System</title>
     </head>
 
 
@@ -28,10 +29,10 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-4">
                             <a href="index.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</a>
+                            <a href="system.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">System</a>
                             <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
                             <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
-                            <a href="specs.php" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Specs</a>
-                            <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
+                            <a href="top.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">TOP</a>
                             
                          </div>
                     </div>
@@ -43,10 +44,10 @@
         <div class="sm:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <a href="index.php"  class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Dashboard</a>
+                <a href="system.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">System</a>
                 <a href="cpu.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">CPU</a>
                 <a href="ram.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">RAM</a>
-                <a href="specs.php" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Specs</a>
-                <a href="disk.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Disk</a>
+                <a href="top.php" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">TOP</a>
                 
             </div>
         </div>
@@ -151,11 +152,11 @@ MMMMMMMMMMM.                     MMMM
             </section>
 
 
-            <section class="mt-8 mr-4 rounded overflow-scroll shadow-lg bg-slate-800 text-white specs">
+            <section class="mt-8 mr-4 rounded overflow-scroll shadow-lg bg-slate-800 text-white system">
                 <div class="font-bold text-xl m-4 text-indigo-400">
                     MACHINE
                     <span class="text-slate-500">|</span>
-                    <span class="text-xs text-slate-500">Specs</span>
+                    <span class="text-xs text-slate-500">System</span>
                 </div>
 
                 <div class="relative rounded-xl overflow-auto">

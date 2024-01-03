@@ -38,4 +38,10 @@ else if(isset($_GET["freq"])) {
 else if(isset($_GET["uptime"])) {
     echo Other::get_uptime();
 }
+
+else if(isset($_GET["top"]) && isset($_GET["sort"]) && in_array($_GET["sort"], ["cpu", "mem"])) {
+    echo json_encode(
+        TOP::get_process_sorted_by_cpu($sorted=$_GET["sort"])
+    );
+}
 ?>

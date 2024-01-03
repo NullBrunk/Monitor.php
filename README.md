@@ -13,8 +13,8 @@ Display system metrics in real-time with a PHP backend, a JavaScript client side
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/b2e38b22-786f-4272-970f-25ef20b8e78c
 
-# 💻 Specs
-The specs page displays a variety of information related to the machine hosting the monitoring website.
+# 💻 System
+The system page displays a variety of information related to the machine hosting the monitoring website.
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/bc6eb743-6a87-4956-970e-a7ed0034f5e0)
 
@@ -103,4 +103,4 @@ Class files are in /App/Class
 
 # Thanks
 
-- https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/specs.php">the specs</a> page.
+- https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/system.php">the system</a> page.
