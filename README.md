@@ -15,9 +15,6 @@ Display system metrics in real-time with a PHP backend, a JavaScript client side
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c-fa6064ace70e
 
 
-
-
-
 # 💻 System
 The system page displays a variety of information related to the machine hosting the monitoring website.
 
