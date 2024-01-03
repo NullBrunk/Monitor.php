@@ -49,6 +49,9 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/86e69d90-7355-4d02-954b
 # ✨ Responsive
 All pages of this project are responsive, meaning they adapt to the screen size accordingly.
 
+https://github.com/NullBrunk/PHPMonitor/assets/125673909/fca04462-4505-4e8d-9eb4-8265a1561033
+
+
 
 
 # ⚒️ Installation
@@ -74,7 +77,8 @@ Start your HTTP servet, and go to http://127.0.0.1/PHPMonitor/
 
 
 # ⚙️ Doc
-Class files are in /App/Class
+All the classes provided in <a href="https://github.com/NullBrunk/PHPMonitor/tree/main/App/Class" target="_blank">App/Class</a> are independent of each other, which means that if you need the services offered by any of these classes, feel free to retrieve the code and use it in your project.
+
 
 ### CPU
 | Method         | Description                          | 
@@ -103,17 +107,17 @@ Class files are in /App/Class
 | get_theorical_capacity | Get amount of RAM in Gb that the RAM stick has |
 
 
-
 ### Disk
 | Method         | Description                           | 
 |---             |:--                                    | 
 | get_total      | Get total amount of disk space in Gb  |
 | get_usage      | Get disk used in Gb                   |
 
+
 ### TOP
-| Method                              | Description                           | 
-|---                                  |:--                                    | 
-| get_sorted_process           | Get processes sorted by parameter  |
+| Method                       | Description                           | 
+|---                           |:--                                    | 
+| get_sorted_process           | Get processes sorted by CPU or RAM    |
 
 
 ### Other
@@ -122,7 +126,6 @@ Class files are in /App/Class
 | get_distrib          | Get the linux distribution name      |
 | get_linux_version    | Get the linux kernel version         |
 | get_uptime           | Get the machine uptme                |
-
 
 
 # Thanks
