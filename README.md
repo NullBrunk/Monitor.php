@@ -51,7 +51,6 @@ So after installing type those commands:
 cd PHPMonitor/App/Utils/info/
 
 sudo dmidecode --type 16,17 > raminfo.txt
-sudo lspci -vv > lspci.txt
 ```
 
 
