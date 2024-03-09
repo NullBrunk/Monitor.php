@@ -7,7 +7,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/PHPMonitor?style=for-the-badge)
 ![repo size](https://img.shields.io/github/repo-size/NullBrunk/PHPMonitor?style=for-the-badge)
 
-Display system metrics in real-time with a PHP backend, a JavaScript client side, and a Tailwind frontend.
+Display system metrics in real-time with a PHP backend and JavaScript & Tailwind for the UI.
 </div>
 
 
