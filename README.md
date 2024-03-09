@@ -1,7 +1,7 @@
 <div align="center">
 
 # PHPMonitor  
-<br/>    
+<br/>     
  
 ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/PHPMonitor?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/PHPMonitor?style=for-the-badge)
