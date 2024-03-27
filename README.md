@@ -15,6 +15,7 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c
 
 
 # 💻 System
+
 The system page displays a variety of information related to the machine hosting the monitoring website.
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/182d47c1-8a0f-4e09-aa9b-c8311605f042)
