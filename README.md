@@ -57,6 +57,9 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/fca04462-4505-4e8d-9eb4
 To get a brief overview, there is a Dockerfile here if you want to test the application locally:
 
 ```bash
+git clone https://github.com/NullBrunk/PHPMonitor
+cd PHPmonitor
+
 # Build the docker image
 docker build -t phpmonitor .
 
