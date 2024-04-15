@@ -10,8 +10,41 @@
 Display real-time system metrics with a PHP backend and JavaScript & Tailwind for the UI.
 </div>
 
-
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c-fa6064ace70e
+
+
+# ⚒️ Installation
+
+## Using docker
+To get a brief overview you can test the app by using the dockerfile:
+
+```bash
+git clone https://github.com/NullBrunk/PHPMonitor && cd PHPmonitor
+
+# Build the docker image
+docker build -t phpmonitor .
+
+# And launch it
+docker run -it -p 80:80 phpmonitor
+```
+
+## Physically
+
+Install an HTTP server + PHP, then
+
+```bash
+cd /srv/http || cd /var/www/html
+sudo git clone https://github.com/NullBrunk/PHPMonitor
+```
+
+Then type this commands:
+```bash
+# Go into the info folder
+cd PHPMonitor/App/Utils/info/
+# Output ram config to a file
+sudo dmidecode --type 16,17 > raminfo.txt
+```
+Start your HTTP server, and go <a href="http://127.0.0.1/PHPMonitor/">here</a>.
 
 
 # 💻 System
@@ -48,45 +81,6 @@ All pages of this project are responsive, meaning they adapt to the screen size 
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/fca04462-4505-4e8d-9eb4-8265a1561033
 
-
-
-
-# ⚒️ Installation
-
-## Using docker
-To get a brief overview, there is a Dockerfile here if you want to test the application locally:
-
-```bash
-git clone https://github.com/NullBrunk/PHPMonitor
-cd PHPmonitor
-
-# Build the docker image
-docker build -t phpmonitor .
-
-# And launch it
-docker run -it -p 80:80 phpmonitor
-```
-
-## Install it to monitor a server
-
-Install an HTTP server and PHP on your machine then, configure your HTTP server to execute PHP
-
-```bash
-cd /srv/http || cd /var/www/html
-sudo git clone https://github.com/NullBrunk/PHPMonitor
-```
-
-The program needs to get the output of certain root command, but we cannot give the root permission to the program or to the apache/nginx user cause this would constitute a lack of security.
-
-So after installing type these commands:
-```bash
-cd PHPMonitor/App/Utils/info/
-
-sudo dmidecode --type 16,17 > raminfo.txt
-```
-
-
-Start your HTTP servet, and go to http://127.0.0.1/PHPMonitor/
 
 
 # ⚙️ Doc
