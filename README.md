@@ -45,7 +45,7 @@ cd PHPMonitor/App/Utils/info/
 sudo dmidecode --type 16,17 > raminfo.txt
 ```
 Start your HTTP server, and go <a href="http://127.0.0.1/PHPMonitor/">here</a>.
-
+<br><br>
 
 # 📚 Deep overview
 ### 💻 System
