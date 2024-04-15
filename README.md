@@ -2,7 +2,7 @@
 
 # PHPMonitor  
 
-<img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics">
+<img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics%20.">
  
 
 <br/>  
