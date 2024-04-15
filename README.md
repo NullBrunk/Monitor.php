@@ -1,13 +1,16 @@
 <div align="center">
 
 # PHPMonitor  
-<br/>     
+
+<img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics%20with%20a%20PHP%20backend%20and%20JavaScript%20%26%20Tailwind%20for%20the%20UI">
+ 
+
+<br/>  
  
 ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/PHPMonitor?style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/NullBrunk/PHPMonitor?style=for-the-badge)
 ![repo size](https://img.shields.io/github/repo-size/NullBrunk/PHPMonitor?style=for-the-badge)
 
-Display real-time system metrics with a PHP backend and JavaScript & Tailwind for the UI.
 </div>
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c-fa6064ace70e
