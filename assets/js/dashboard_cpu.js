@@ -1,3 +1,6 @@
+// Show the CPU usage curve with chart.js
+
+// Initial CPU usage
 let cpu_datas = [0, 0, 0, 0, 0, 0];
 const cpu_cvs = document.getElementById('cpuChart');  
 
@@ -28,9 +31,12 @@ let cpu = new Chart(cpu_cvs, {
     }
 });
 
+// Update the Chart every second
 setInterval(() => {
+    // Get the CPU usage from the API
     fetch("App/api.php?cpu").then((resp) => {
         resp.json().then((data) => {
+            // Push it into the char.js
             cpu_datas.shift();
             cpu_datas.push(data);
 

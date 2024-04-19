@@ -1,3 +1,6 @@
+// Show the CPU usage curve with chart.js
+
+// Initial RAM usage
 let ram_datas = [0, 0, 0, 0, 0, 0];
 const ram_cvs = document.getElementById('ramChart');  
 
@@ -28,9 +31,12 @@ let ram = new Chart(ram_cvs, {
     }
 });
 
+// Update the char every second
 setInterval(() => {
+    // Get the RAM usage from the API
     fetch("App/api.php?ram_percent").then((resp) => {
         resp.json().then((data) => {
+            // Push it into the chart.js array
             ram_datas.shift();
             ram_datas.push(data);
 
