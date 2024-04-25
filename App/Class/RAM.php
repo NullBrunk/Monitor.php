@@ -4,7 +4,7 @@
  * @class   RAM
  * 
  * @brief   This class is an interface that facilitates the retrieval 
- *          of various RAM related information.
+ *          of various RAM-related information.
  */
 
 class RAM {

@@ -1,11 +1,12 @@
 <?php 
 
 /**
- * @class   RAM
+ * @class   TOP
  * 
  * @brief   This class is an interface that facilitates the retrieval 
  *          and the ordering of processes
  */
+
 class TOP {
 
     /**
