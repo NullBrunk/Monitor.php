@@ -1,4 +1,9 @@
 <?php  
+/**
+ * This file makes the link between the frontend (javascript with ajax requests)
+ * and the backend (the Classes in the Class folder)
+ */
+
 header("Content-type: application/json");
 
 require_once "./Class/Autoloader.php";

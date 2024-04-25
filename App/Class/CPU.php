@@ -1,11 +1,13 @@
 <?php
 
 /**
- * This class is an interface that facilitates the retrieval 
- * of various CPU-related information.
+ * @class   CPU
+ * 
+ * @brief   This class is an interface that facilitates the retrieval 
+ *          of various CPU-related information.
  */
 
-class CPU {
+ class CPU {
    
     // This attribute contains the content of the /proc/cpuinfo file
     private string $cpuinfo;

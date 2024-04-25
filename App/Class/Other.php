@@ -1,8 +1,10 @@
 <?php
 
 /**
- * This class is an interface that facilitates the retrieval 
- * of various information.
+ * @class   Disk
+ * 
+ * @brief   This class is an interface that facilitates the retrieval 
+ *          of various information.
  */
 class Other {
 

@@ -1,6 +1,11 @@
 <?php
 
-use function PHPSTORM_META\map;
+/**
+ * @class   RAM
+ * 
+ * @brief   This class is an interface that facilitates the retrieval 
+ *          of various RAM related information.
+ */
 
 class RAM {
     
@@ -17,15 +22,34 @@ class RAM {
         $this -> dmidecode = file_get_contents(__DIR__ . "/../Utils/info/raminfo.txt" );
     }
 
+    /**
+     * Convert kilobyte to bigabyte
+     *
+     * @param int $unit_in_kb       The number (in kb) to convert in Gb
+     *
+     * @return int                  The number converted in Gb
+     */
     private function kb_to_gb($unit_in_kb) {
         return round((int)$unit_in_kb / pow(10, 6), 2);
     }
 
+
+    /**
+     * Get the total amount of ram installed in the computer
+     *
+     * @return int                  The number ram installed in Gb
+     */
     public function get_total() {
         $kb_ram_total = explode(":", $this -> parsable_meminfo[0])[1];
         return $this -> kb_to_gb($kb_ram_total);
     }
 
+
+    /**
+     * Get the total amount of ram used 
+     *
+     * @return int                  The number of ram used in Gb
+     */
     public function get_usage() {
         $kb_ram_used = explode(":", $this -> parsable_meminfo[2])[1];
         $used = $this -> get_total() - $this -> kb_to_gb($kb_ram_used); 
@@ -33,11 +57,21 @@ class RAM {
         return $used;
     }
 
+
+    /**
+     * Get the total amount of ram used in percent
+     *
+     * @return int                  The number of ram used in %
+     */
     public function get_usage_percent() {
         return $this -> get_usage() / $this -> get_total() * 100;
     }
 
-    // Get the speed of the RAM in MT/s
+    /**
+     * Get the speed of the RAM
+     *
+     * @return int                  The number speed of the RAM in MT/s
+     */
     public function get_speed() {
         preg_match(
             '/Speed: (.*)/', 
@@ -48,7 +82,11 @@ class RAM {
         return $matches[1];
     }
 
-    // Get the DDR type of the RAM
+    /**
+     * Get the DDR type of the RAM
+     *
+     * @return int                  The DDR version of the RAM
+     */
     public function get_ddr_version() {
         preg_match(
             '/DDR./', 
@@ -59,6 +97,11 @@ class RAM {
         return $matches[0];
     }
 
+    /**
+     * Get the the total amount of installed swap
+     *
+     * @return int                  The total amount of swap in Gb
+     */
     public function get_swap_total() {
         preg_match(
             '/SwapTotal:\s+(.*)/', 
@@ -69,6 +112,12 @@ class RAM {
         return $this -> kb_to_gb($matches[1]);
     }
 
+
+    /**
+     * Get the the swap usage
+     *
+     * @return int                  The swapusage in Gb
+     */
     public function get_swap_usage() {
         $swapinfo = file_get_contents("/proc/swaps");
         $swapinfo = explode("\n", $swapinfo);
@@ -90,6 +139,12 @@ class RAM {
         return $this -> kb_to_gb($used_swap);
     }
 
+
+    /**
+     * Get the the swap usage in percent
+     *
+     * @return int                  The swapusage in %
+     */
     public function get_swap_usage_percent() {
         return round($this -> get_swap_usage() / $this -> get_swap_total() * 100);
     }
@@ -104,6 +159,12 @@ class RAM {
         return $matches[1];
     }
 
+
+    /**
+     * Get the the number of slots in the machine
+     *
+     * @return int                  The number of slots in the machine
+     */
     public function get_number_of_slots() {
         preg_match(
             '/Number Of Devices: (.*)/', 
@@ -114,6 +175,12 @@ class RAM {
         return $matches[1];
     }
 
+
+    /**
+     * Get the the theoretical max amount of ram that could be installed
+     *
+     * @return int                  The max amount of ram that could be installed
+     */
     public function get_theorical_capacity() {
         preg_match(
             '/Size: (.*)/', 

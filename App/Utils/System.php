@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Hashmap that contains several utils informations linked with the System
+ */
 $SPECS = [
     "Host" => file_get_contents("/sys/devices/virtual/dmi/id/product_name"), 
     "Kernel" => "Linux " . Other::get_linux_version(), 

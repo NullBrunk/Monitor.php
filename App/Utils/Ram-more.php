@@ -1,4 +1,8 @@
 <?php 
+
+/**
+ * Hashmap that contains several utils informations linked with the RAM
+ */
 $INFO = [
     "Speed: " => $ram -> get_speed(),
     "Max Capacity: " => $ram -> get_max_capa_ram(),
