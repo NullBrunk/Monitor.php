@@ -19,7 +19,7 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/1ea23d5f-1619-4a48-8f1c
 # ⚒️ Installation
 
 ## Using docker
-> [!IMPORTANT]
+> [!TIP]
 > To get a brief overview you can test the app by using the dockerfile:
 
 ```bash
