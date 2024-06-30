@@ -34,7 +34,8 @@ docker run -it -p 80:80 phpmonitor
 
 ## Physically
 
-Install an HTTP server + PHP, then
+> [!IMPORTANT]
+> Install an HTTP server + PHP, then
 
 ```bash
 cd /srv/http || cd /var/www/html
@@ -42,7 +43,7 @@ sudo git clone https://github.com/NullBrunk/PHPMonitor
 ```
 
 > [!CAUTION]
-> Type this commands for the RAM page and charts:
+> Type this command for the RAM monitoring page otherwise it will not work:
 
 ```bash
 # Output ram config to a file
