@@ -93,4 +93,4 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/fca04462-4505-4e8d-9eb4
 
 
 # 🤝 Thanks
-- https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/system.php">the system</a> page.
+- https://github.com/dylanaraps/neofetch for the ascii logos on <a href="https://github.com/NullBrunk/PHPMonitor/blob/main/system.php">the system</a> page. 
