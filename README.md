@@ -1,6 +1,6 @@
 <div align="center">
 
-# PHPMonitor  
+# Monitor.php  
 
 <img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics.">
  
@@ -23,7 +23,7 @@ https://github.com/NullBrunk/Monitor.php/assets/125673909/1ea23d5f-1619-4a48-8f1
 > **To get a brief overview you can test the app by using the dockerfile:**
 
 ```bash
-git clone https://github.com/NullBrunk/Monitor.php && cd PHPmonitor
+git clone https://github.com/NullBrunk/Monitor.php && cd Monitor.php
 
 # Build the docker image
 docker build -t phpmonitor .
