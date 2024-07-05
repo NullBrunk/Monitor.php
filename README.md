@@ -56,23 +56,20 @@ Start your HTTP server, and go <a href="http://127.0.0.1/PHPMonitor/">here</a>.
 # 📚 Deep overview
 ### 💻 System
 
-> [!NOTE]
-> The system page displays a variety of information related to the machine hosting the monitoring website.
+The system page displays a variety of information related to the machine hosting the monitoring website.
 
 ![image](https://github.com/NullBrunk/PHPMonitor/assets/125673909/182d47c1-8a0f-4e09-aa9b-c8311605f042)
 
 
 ### 🔳 CPU
 
-> [!NOTE]
-> The CPU page displays various informations related to the CPU, including real-time updates of the frequency for each thread. You can stop this updating by clicking on the stop button, as demonstrated in this video.
+The CPU page displays various informations related to the CPU, including real-time updates of the frequency for each thread. You can stop this updating by clicking on the stop button, as demonstrated in this video.
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/e68a3c16-911c-4cb4-b09e-c62ed6f2a3ad
 
 ### 💾 RAM
 
-> [!NOTE]
-> The RAM page displays various informations related to the volatile memory (RAM) and to the SWAP, with real-time graph and metrics as shown in this video.
+The RAM page displays various informations related to the volatile memory (RAM) and to the SWAP, with real-time graph and metrics as shown in this video.
 
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/332354e2-87ef-494e-968e-6553bba30def
@@ -80,14 +77,12 @@ https://github.com/NullBrunk/PHPMonitor/assets/125673909/332354e2-87ef-494e-968e
 
 ### ⚙️ TOP 
 
-> [!NOTE]
-> The TOP page displays various real-time informations related to the processes. You can sort theses processes by RAM/CPU consumption with the right select menu as demonstrated in the video.
+The TOP page displays various real-time informations related to the processes. You can sort theses processes by RAM/CPU consumption with the right select menu as demonstrated in the video.
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/86e69d90-7355-4d02-954b-b1cac25f9c6f
 
 ### ✨ Responsive
-> [!NOTE]
-> All pages of this project are responsive, meaning they adapt to the screen size accordingly.
+All pages are responsive, meaning they adapt to the screen size accordingly.
 
 https://github.com/NullBrunk/PHPMonitor/assets/125673909/fca04462-4505-4e8d-9eb4-8265a1561033
 
