@@ -4,7 +4,6 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics.">
  
-
 <br/>  
  
 ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/Monitor.php?style=for-the-badge)
@@ -20,7 +19,7 @@ https://github.com/NullBrunk/Monitor.php/assets/125673909/1ea23d5f-1619-4a48-8f1
 
 ## Using docker
 > [!TIP]
-> **To get a brief overview you can test the app by using the dockerfile:**
+> To get a brief overview you can test the app by using the dockerfile:
 
 ```bash
 git clone https://github.com/NullBrunk/Monitor.php && cd Monitor.php
