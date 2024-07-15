@@ -2,8 +2,8 @@
 
 # Monitor.php  
 
-<img src="https://readme-typing-svg.demolab.com?font=Iosevka+Nerd+Font&weight=900&pause=1000&color=6791C9&background=0C0E0F00&center=true&vCenter=true&width=700&lines=Display%20real-time%20system%20metrics.">
- 
+[![My Skills](https://skillicons.dev/icons?i=php,javascript,tailwind&theme=dark)](https://skillicons.dev)
+
 <br/>  
  
 ![GitHub top language](https://img.shields.io/github/languages/top/NullBrunk/Monitor.php?style=for-the-badge)
