@@ -2,7 +2,14 @@
 
 # Monitor.php  
 
-[![My Skills](https://skillicons.dev/icons?i=php,javascript,tailwind&theme=dark)](https://skillicons.dev)
+<div>
+ ![php](https://github.com/user-attachments/assets/59de89f6-6cc0-4ebc-8208-00f8db39d323)
+ ![js](https://github.com/user-attachments/assets/0fbab25d-8122-4913-b780-9757d9fad54e)
+ ![chartjs](https://github.com/user-attachments/assets/bd2b693f-659b-4da7-a9c7-d04719e65246)
+ ![tailwind](https://github.com/user-attachments/assets/f16fe60d-278f-4f41-af90-ff7143943614)
+</div>
+
+
 
 <br/>  
  
